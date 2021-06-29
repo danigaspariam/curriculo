@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    background-color: rgb(247, 247, 185);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    
+}
+.corpo{
+    display: flex;
+}
+
+img{
+    max-width: 100%;
+    width: 75%;
+    border-radius: 20px;
+    padding-top: 30px;
+
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(253, 186, 218, .8);
+    flex-wrap: nowrap;
+    height: 100%;
+    justify-content: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-size: 35px;
+    font-weight: bold;
+    
+}
+
+.header div{
+    transition: .5s;
+    color: rebeccapurple;
+}
+
+.header div:hover{
+    color: rgb(252, 25, 150);
+}
+
+.lateral{
+    background-color: rgb(247, 204, 225, 0.5);
+    width: 30%;
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 10px; 
+    border-radius: 10px;
+    margin-left: 20px;   
+}
+.cursos{
+    margin-top: 30px;
+    width: 80%;
+    padding-bottom: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+.cursos h1{
+    padding-bottom: 30px;
+    transition: .5s;
+    font-size: 40px;
+    color: rebeccapurple;
+
+}
+.cursos h1::before{
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 10px;
+    margin-right: 10px;
+    background-color: rgb(252, 25, 150);
+}    
+.cursos h1:hover{
+    color: rgb(252, 25, 150);
+}
+.hobbies{
+    margin-top: 30px;
+    width: 80%;
+    padding-bottom: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.hobbies h1:hover{
+    color: rgb(252, 25, 150);
+}
+.hobbies h1::before{
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 10px;
+    margin-right: 10px;
+    background-color: rgb(252, 25, 150);
+}
+.hobbies h1{
+    padding-bottom: 30px;
+    transition: .5s;
+    font-size: 40px;
+    color: rebeccapurple;
+}
+.meio{
+    width: 45%;
+    background-color: rgb(247, 204, 225, 0.5);
+    margin-top: 80px;
+    display: inline-block;
+      
+    margin-left: 20px; 
+    border-radius: 10px;   
+}
+.sobre{
+    
+    margin-top: 60px;
+    padding-bottom: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+.sobre h1:hover{
+    color: rgb(252, 25, 150);
+}
+.sobre h1{
+    padding-bottom: 30px;
+    transition: .5s;
+    font-size: 40px;
+    color: rebeccapurple;
+}
+.sobre h1::before{
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 10px;
+    margin-right: 10px;
+    background-color: rgb(252, 25, 150);
+}
+.links-uteis{
+    width: 20%;
+    background-color: rgb(247, 204, 225, 0.5);
+    margin-top: 80px;
+    margin-right: 20px;  
+    margin-left: 20px; 
+    border-radius: 10px; 
+    padding-top: 60px;    
+}
+.links-uteis a{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 40px;
+    padding-top: 20px;
+    transition: .5s;
+}
+.links-uteis a:hover{
+    color: rgb(252, 25, 150);
+}
+footer{
+    
+    text-align: center;
+    margin-top: 30px;
+    border-top: black 2px solid;
+    margin-bottom: 20px;
+    padding-top: 10px;
+}
+
+.endereco{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 60px;
+}
+.endereco li{
+    font-size: 15px;
+    
+}
+
+.endereco p{
+    width: 80%;
+    padding-left: 5%;
+    margin-top: 60px;
+}
+
+.imagem{
+    opacity: 0;
+}
+.imagem.ativo{
+    opacity: 1;
+    transition: 2s;
+}
+
+.links-uteis{
+    display: none;
+}
+
+.links-uteis.ativo{
+    display: block !important;
+    animation: show .5s forwards;
+}
+@keyframes show{
+    from{
+        opacity: 0;
+        transform: translate3d(-30px , 0, 0);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@media (max-width: 700px){
+    .header{
+        width: 100%;
+    }
+
+    .corpo{
+        display: block;
+        
+    }
+    .lateral {
+        width: 90%;
+    }
+    .meio{
+        width: 90%;
+    }
+    .links-uteis{
+        width: 90%;
+    }
+
+}
+
+@media (max-width: 1080px){
+    .endereco li{
+    font-size: 10px;
+    }
+
+}
+   
